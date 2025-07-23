@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebaseaut/pages/home.dart';
 import 'package:firebaseaut/pages/login.dart';
 import 'package:firebaseaut/service/database.dart';
 import 'package:firebaseaut/service/shared_preference.dart';
@@ -37,11 +38,11 @@ class _RegisterState extends State<Register> {
         // Store data to firebase database
         await Database().addUserDetails(userInfoMap, Id);
         // Redirect to page
-        // Navigator.push(context, MaterialPageRoute(builder: (context) => BottomNav()));
         // Success message
         nameController.clear();
         emailController.clear();
         passwordController.clear();
+        Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
         showDialog(
           context: context,
           builder: (_) => AlertDialog(

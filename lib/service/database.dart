@@ -10,4 +10,8 @@ class Database{
         .set(userInfoMap);
   }
 
+  Future<QuerySnapshot> getUserDetailByEmail(String email) async {
+    return await FirebaseFirestore.instance.collection('users').where('Email', isEqualTo: email).get();
+  }
+
 }

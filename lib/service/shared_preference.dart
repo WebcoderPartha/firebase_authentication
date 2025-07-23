@@ -21,7 +21,6 @@ class SharedPreference {
     return sharedPreferences.setString(userEmailKey, userEmail);
   }
 
-
   getUserId()async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     return sharedPreferences.getString(userIdKey);
