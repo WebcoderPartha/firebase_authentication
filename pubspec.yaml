@@ -38,6 +38,7 @@ dependencies:
   cloud_firestore:
   firebase_auth:
   shared_preferences:
+  random_string: ^2.3.1
 
 dev_dependencies:
   flutter_test:
