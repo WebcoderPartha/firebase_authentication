@@ -1,14 +1,14 @@
-import 'package:firebaseaut/pages/register.dart';
+import 'package:firebaseaut/pages/login.dart';
 import 'package:flutter/material.dart';
 
-class Login extends StatefulWidget {
-  const Login({super.key});
+class Register extends StatefulWidget {
+  const Register({super.key});
 
   @override
-  State<Login> createState() => _LoginState();
+  State<Register> createState() => _RegisterState();
 }
 
-class _LoginState extends State<Login> {
+class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +25,7 @@ class _LoginState extends State<Login> {
               color: Colors.blue,
               child: Column(
                 children: [
-                  Text('Login', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20),),
+                  Text('Register', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20),),
                   SizedBox(height: 10,),
                   Container(
                     decoration: BoxDecoration(
@@ -33,9 +33,22 @@ class _LoginState extends State<Login> {
                     ),
                     child: TextField(
                       decoration: InputDecoration(
-                        hintText: 'Email',
-                        border: InputBorder.none,
-                        prefixIcon: Icon(Icons.email)
+                          hintText: 'Name',
+                          border: InputBorder.none,
+                          prefixIcon: Icon(Icons.person)
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 10,),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                    ),
+                    child: TextField(
+                      decoration: InputDecoration(
+                          hintText: 'Email',
+                          border: InputBorder.none,
+                          prefixIcon: Icon(Icons.email)
                       ),
                     ),
                   ),
@@ -58,7 +71,7 @@ class _LoginState extends State<Login> {
                     decoration: BoxDecoration(
                       color: Colors.white,
                     ),
-                    child: Text('SUBMIT', style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),),
+                    child: Text('Register', style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),),
                   ),
                   SizedBox(height: 10,),
                   Row(
@@ -68,9 +81,9 @@ class _LoginState extends State<Login> {
                       SizedBox(width: 5.0,),
                       GestureDetector(
                         onTap: () {
-                          Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Register()));
+                          Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Login()));
                         },
-                        child: Text('Sign Up', style: TextStyle(color: Colors.deepPurple, fontWeight: FontWeight.bold),),
+                        child: Text('Sign In', style: TextStyle(color: Colors.deepPurple, fontWeight: FontWeight.bold),),
                       )
                     ],
                   )
